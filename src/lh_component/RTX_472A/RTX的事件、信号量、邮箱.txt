@@ -1,0 +1,83 @@
+
+
+
+OS_SEM semaphore;/* 声明一个信号量 */
+os_mbx_declare (mailbox, 10);/* 声明一个支持 10 个消息的消息邮箱 */
+
+	os_sem_init(&semaphore, 0);
+	os_mbx_init (&mailbox, sizeof(mailbox));
+
+		OS_RESULT xResult; // 等待结果的类型
+
+		xResult=os_evt_wait_and(0x0003,0xFFFF);
+		switch (xResult) {
+		/* 接收到 bit1 和 bit0 都被设置的消息 */
+		case OS_R_EVT:
+			BEEP = 1;
+			break;
+			/* 超时 */
+		case OS_R_TMO:
+			break;
+			/* 其他值不处理 */
+		default:
+			break;
+		}
+		os_dly_wait(50);
+		BEEP = 0;
+		xResult = os_sem_wait (&semaphore, 0xFFFF);
+		switch (xResult) {
+		case OS_R_OK:/* 无需等待接受到信号量同步信号 */
+
+			break;
+
+		case OS_R_SEM:/* 信号量不可用， usMaxBlockTime 等待时间内收到信号量同步信号 */
+
+			break;
+
+		case OS_R_TMO:/* 超时 */
+			break;
+			/* 其他值不处理 */
+		default:
+			break;
+		}
+		xResult = os_mbx_wait(&mailbox, (void *)&pMsg, 0xFFFF);
+		switch (xResult) {
+		case OS_R_OK:/* 无需等待接受到消息邮箱数据 */
+			break;
+		case OS_R_MBX:/* 消息邮箱空， usMaxBlockTime 等待时间从消息邮箱内获得数据 */
+			break;
+			/* 超时 */
+		case OS_R_TMO:
+			break;
+			/* 其他值不处理 */
+		default:
+			break;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -534,10 +534,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>148</TopLine>
-      <CurrentLine>149</CurrentLine>
+      <TopLine>147</TopLine>
+      <CurrentLine>152</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\lh_component\RTX_472A\RTX_Conf_CM.c</PathWithFileName>
       <FilenameWithoutPath>RTX_Conf_CM.c</FilenameWithoutPath>
@@ -1112,7 +1112,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>59</TopLine>
+      <TopLine>58</TopLine>
       <CurrentLine>63</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\bsp_stm32\STM32F10x_StdPeriph_Lib_V3.5.0\stm32f10x_it.c</PathWithFileName>
@@ -1480,7 +1480,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>986</TopLine>
+      <TopLine>985</TopLine>
       <CurrentLine>990</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\bsp_stm32\STM32F10x_StdPeriph_Lib_V3.5.0\src\stm32f10x_usart.c</PathWithFileName>
